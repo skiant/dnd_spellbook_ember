@@ -1,0 +1,6 @@
+<div class="spells-list">
+  <span class="head">{{level}} - Max Spells: {{maxSpells}}</span>
+  {{#each spells as |spell|}}
+    {{spb-spellcard title=spell.title prepCount=spell.prepCount maxCount=maxSpells currentCount=currentCount}}
+  {{/each}}
+</div>

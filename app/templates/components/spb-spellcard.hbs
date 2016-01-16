@@ -1,0 +1,9 @@
+<article class="spell-card">
+  {{title}}
+
+  <span class="preparation">
+    <button type="button" name="removePrep" {{action 'removePrep'}} class="label" disabled={{cannotRemovePrep}}>-</button>
+    <span class="label" >{{prepCount}}</span>
+    <button type="button" name="addPrep" {{action 'addPrep'}} class="label" disabled={{cannotAddPrep}}>+</button>
+  </span>
+</article>

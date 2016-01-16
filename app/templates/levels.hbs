@@ -1,0 +1,8 @@
+Levels : 
+<ul>
+  {{#each model as |level|}}
+    {{#link-to "levels.edit" level}}<li>Level {{level.id}} - Max Spells: {{level.maxSpells}}</li>{{/link-to}}
+  {{/each}}
+</ul>
+
+{{outlet}}
