@@ -1,8 +1,19 @@
-Levels : 
-<ul>
+{{#paper-list}}
   {{#each model as |level|}}
-    {{#link-to "levels.edit" level}}<li>Level {{level.id}} - Max Spells: {{level.maxSpells}}</li>{{/link-to}}
+    {{#paper-item class="md-3-line" param=level action=(action "transition" "levels.edit")}}
+      <h1 class="md-avatar">{{level.value}}</h1>
+      <div class="md-list-item-text">
+        <p>Max Spells: {{level.maxSpells}}</p>
+       </div>
+
+       {{#paper-button icon-button=true param=level action="deleteLevel"}}
+          {{paper-icon icon="remove-circle"}}
+        {{/paper-button}}
+    {{/paper-item}}
+    {{paper-divider inset=true}}
   {{/each}}
-</ul>
+{{/paper-list}}
+
+{{#paper-button action="addLevel" raised="true" primary="true"}}New Level{{/paper-button}}
 
 {{outlet}}

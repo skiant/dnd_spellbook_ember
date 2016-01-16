@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'dnd-spellbook-ember',
     environment: environment,
     baseURL: '/',
-    locationType: 'auto',
+    locationType: process.env.EMBER_CLI_ELECTRON ? 'hash' : 'auto',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -20,10 +20,10 @@ module.exports = function(environment) {
     firebase: 'https://dnd-spellbook.firebaseio.com/',
     contentSecurityPolicy: {
       'default-src': "'none'",
-      'script-src': "'self'",
-      'font-src': "'self'",
+      'script-src': "'self' 'unsafe-inline'",
+      'font-src': "'self' fonts.gstatic.com",
       'connect-src': "'self' *",
-      'img-src': "'self'",
+      'img-src': "'self' data:",
       'style-src': "'self' *",
       'media-src': "'self'"
     },

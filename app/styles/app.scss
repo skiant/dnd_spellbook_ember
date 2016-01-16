@@ -1,0 +1,10 @@
+@import 'ember-paper';
+
+.md-toolbar-tools,
+.md-button {
+  a{
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+}

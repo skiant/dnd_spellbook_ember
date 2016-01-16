@@ -1,2 +1,7 @@
-<h2>Level {{model.id}}</h2>
-<p>Max Spells : {{input type="number" value=model.maxSpells}}</p>
+{{#paper-card}}
+  {{#paper-card-content}}
+    {{paper-input type="number" value=model.value label="Level"}}
+    {{paper-input type="number" value=model.maxSpells label="Max Spells"}}
+    {{#paper-button action="save" param=model}}Save{{/paper-button}}
+  {{/paper-card-content}}
+{{/paper-card}}

@@ -1,1 +1,13 @@
-{{outlet}}
+{{#paper-card}}
+  {{#paper-card-content}}
+    {{#paper-select placeholder="Select a level" model=model.level}}
+      {{#each levels as |level|}}
+        {{#paper-option value=level.id}}
+          {{level.value}}
+        {{/paper-option}}
+      {{/each}}
+    {{/paper-select}}
+    {{paper-input type="text" value=model.title label="Spell Name"}}
+    {{#paper-button action="save" param=model}}Save{{/paper-button}}
+  {{/paper-card-content}}
+{{/paper-card}}

@@ -1,7 +1,11 @@
-<ul class="nav">
-  <li>{{#link-to "spellbook"}}Spellbook{{/link-to}}</li>
-  <li>{{#link-to "levels"}}Edit Levels{{/link-to}}</li>
-  <li>{{#link-to "spells"}}Edit Spells{{/link-to}}</li>
-</ul>
+{{#paper-toolbar}}
+  <div class="md-toolbar-tools">
+  {{#paper-button}}{{#link-to "spellbook"}}Spellbook{{/link-to}}{{/paper-button}}
+  {{#paper-button}}{{#link-to "levels"}}Edit Levels{{/link-to}}{{/paper-button}}
+  {{#paper-button}}{{#link-to "spells"}}Edit Spells{{/link-to}}{{/paper-button}}
+  </div>
+{{/paper-toolbar}}
 
-{{outlet}}
+{{#paper-content layout-padding="true"}}
+  {{outlet}}
+{{/paper-content}}
