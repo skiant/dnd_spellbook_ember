@@ -6,6 +6,4 @@ export default Ember.Controller.extend({
       record.save();
     },
   },
-
-  levels: this.store.findAll('level'),
 });
